@@ -40,7 +40,7 @@ void fdt_add_virtio(void *fdt, const char *name, uint32_t spi_irq,
   fdt_setprop(fdt, node, "dma-coherent", NULL, 0);
   fdt_setprop_string(fdt, node, "compatible", "virtio,mmio");
   fdt32_t irq[3] = {
-      cpu_to_fdt32(1),
+      cpu_to_fdt32(0),
       cpu_to_fdt32(spi_irq),
       cpu_to_fdt32(0x1),
   };
